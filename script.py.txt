@@ -1,15 +1,15 @@
 import time
 
-def flood_ram(8 gb):
+def flood_ram(size_mb):
     memory_hog = []
     try:
         for _ in range(size_mb):
-            memory_hog.append(bytearray(1024 * 1024))
+            memory_hog.append(bytearray(1024 * 1024))  # 1MB
             time.sleep(0.01)
     except MemoryError:
-        print("MemoryError")
+        print("💥 MemoryError: System ran outta RAM!")
     finally:
         input("Press Enter to release memory...")
         memory_hog.clear()
 
-flood_ram(500)
+flood_ram(8000)  # 8000MB = 8GB
