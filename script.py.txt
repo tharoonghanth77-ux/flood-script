@@ -15,4 +15,4 @@ def flood_ram(size_mb):
         input("🧠 Press Enter to release memory...")
         memory_hog.clear()
 
-flood_ram(8000)  # = 8GB
+flood_ram(16000)  # = 8GB
