@@ -1,0 +1,15 @@
+import time
+
+def flood_ram(8 gb):
+    memory_hog = []
+    try:
+        for _ in range(size_mb):
+            memory_hog.append(bytearray(1024 * 1024))
+            time.sleep(0.01)
+    except MemoryError:
+        print("MemoryError")
+    finally:
+        input("Press Enter to release memory...")
+        memory_hog.clear()
+
+flood_ram(500)
