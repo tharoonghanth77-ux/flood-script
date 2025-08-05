@@ -2,17 +2,18 @@ import time
 
 def flood_ram(size_mb):
     memory_hog = []
-    print(f"🐤 Allocating {size_mb}MB of RAM...")  # Add a visible print
+    print(f"Allocating {size_mb}MB of RAM...")  # Add a visible print
     try:
         for i in range(size_mb):
             memory_hog.append(bytearray(1024 * 1024))  # 1MB block
             if i % 500 == 0:
-                print(f"✅ Allocated: {i}MB so far...")
+                print(f"Allocated: {i}MB so far...")
             time.sleep(0.01)
     except MemoryError:
-        print("💥 MemoryError: System ran outta RAM!")
+        print("MemoryError: System ran outta RAM!")
     finally:
-        input("🧠 Press Enter to release memory...")
+        input("Press Enter to release memory...")
         memory_hog.clear()
 
 flood_ram(10000000)  # = 8GB
+
